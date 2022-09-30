@@ -1,6 +1,11 @@
+export function incrementCount(){
+  return {type: "count/increment"}
+}
+
 const initialState = {
   items: [],
 };
+
 
 function counterReducer(state = initialState, action) {
   switch (action.type) {
