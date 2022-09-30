@@ -1,6 +1,9 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
+function incrementCount(){
+  return {type: "count/increment"}
+}
 function Counter() {
   // read from the Redux store
   const items = useSelector((state) => state.items);
@@ -10,7 +13,7 @@ function Counter() {
 
   function handleOnClick() {
     // dispatching an action on click
-    dispatch({ type: "count/increment" });
+    dispatch(incrementCount());
   }
 
   return (
